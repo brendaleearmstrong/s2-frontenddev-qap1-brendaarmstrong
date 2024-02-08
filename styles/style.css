@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #D5E2DB; /* Page background to green */
+    color: #231709; /* body text color */
+    line-height: 1.6;
+}
+
+body a {
+    color: #36694e; /* Link color */
+    text-decoration: none; /* Removes underline from links */
+}
+
+body a:hover {
+    color: #D5E2DB; /* Color when hovering */
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+body a:active {
+    color: #9ABBAD; /* Color when the link is clicked (active) */
+}
+
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    background-color: #ffffff; /* Body container to white */
+    padding: 20px; /* Adjusted padding for whitespace */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background-color: #231709;
+}
+
+.h1, .h2, .h3 {
+    color: #36694e; 
+}
+
+.logo {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.menu {
+    flex: auto;
+    flex-wrap: wrap;
+    align-items: left;
+}
+
+nav {
+    background-color: #231709;
+    display: block;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0;
+    display: inline-block;
+    list-style-type: none;
+    transition: all 0.2s;
+}
+
+nav > ul > li > a {
+    color: #D5E2DB;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 1em; /* Adjust padding as needed */
+    text-decoration: none;
+    font-size: 1em; 
+}
+
+nav li:hover > a, nav li:active > a {
+    background-color: #D5E2DB;
+    color: #231709;
+}
+
+nav li > ul {
+    display: none;
+    margin-top: 1px;
+    background-color: #231709;
+    color: #D5E2DB;
+}
+
+nav li > ul li {
+    display: block;
+}
+
+nav li > ul li a {
+    color: #231709;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+nav li:hover > ul, nav li:active > ul {
+    position: absolute;
+    display: block;
+}
+
+nav li > ul > li ul {
+    display: none;
+    background-color: #231709;
+}
+
+nav li > ul > li:hover > ul {
+    position: absolute;
+    display: block;
+    margin-left: 100%;
+    margin-top: -3em;
+}
+
+nav li > ul > li:hover > ul li a {
+    color: #D5E2DB;
+}
+
+.button {
+    background-color: #D5E2DB; /* Button color for call to action */
+    width: 200px; /* Button width */
+    height: 40px; /* Button height */
+    color: #36694e; /* Button text color */
+    border-radius: 0px; /* Increase for rounded corners for button */
+    border-color: #D5E2DB; /* Border color */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Announcement Bar */
+
+@keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .announcement-bar {
+    background-color: #D5E2DB; 
+    color: #231709;
+    padding: 5px;
+    text-align: center;
+    overflow: hidden; 
+    white-space: nowrap; 
+  }
+  
+  .scrolling-text {
+    display: inline-block;
+    animation: scrollText 30s linear infinite; /* Adjust the timing as needed - not sure how to repeat the scroll text?? */
+  }
+
+/* Hero Section */
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hero-section .hero-image {
+    width: 100%; /* Hero image width as requested */
+    margin-bottom: 20px; /* Spacing below the hero image */
+}
+
+.hero-text {
+    text-align: center;
+    position: relative;
+}
+
+.hero-text h1 {
+    color: #36694e; /* Ensuring hero text is legible */
+}
+
+.hero-text p {
+    color: #231709;
+}
+
+.text-section {
+    margin: 20px 0; /* Vertical spacing for visual separation */
+    height: 50px;
+    color: #36694e;
+    padding: 20px;
+    background-color: #D5E2DB;
+    text-align: center;
+    font-size: 1em;
+}
+
+.large-text-section {
+    margin: 20px 0; /* Vertical spacing for visual separation */
+    height: 200px;
+    color: #36694e;
+    padding: 20px;
+    background-color: #D5E2DB;
+    text-align: center;
+    font-size: 1em;
+}
+
+
+/* Feature Boxes Section */
+
+.boxes-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0; /* Vertical spacing for visual separation */
+}
+
+.box {
+    width: calc(33.333% - 20px); /* Equal width with spacing */
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for each box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box img {
+    width: 100%; /* Ensure images fit within the boxes */
+    height: 100%;
+    margin-bottom: 20px; /* Spacing between image and text */
+}
+
+/* Sponsorship Section */
+
+.sponsorship-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+}
+
+.content-box, .sponsor-logos {
+    width: 48%; /* Split section into two boxes */
+}
+
+.sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sponsor-logos img {
+    height: 150px; /* Fixed width for logos */
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #231709;
+    font-size: 0.9em;
+    color: #D5E2DB;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif; /* Apply the Inter font family */
+}
+
+.footer-row {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    flex-direction: column; /* Align items vertically */
+    margin-bottom: 20px; /* Spacing for second row */
+}
+
+.footer-links {
+    margin-top: 10px; /* Add some space between the links and the logo */
+    color: #D5E2DB;
+    font-size: 2em;
+}
+
+.footer-links a {
+    color: #9ABBAD; /* Set link color to light green */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Add some space between the links */
+    transition: color 0.2s; /* Smooth transition for color change */
+}
+
+.footer-links a:hover {
+    color: #36694e; /* Change link color to white on hover */
+}
+
+.footer-bottom {
+    font-size: 0.9em; 
+
+@media (max-width: 980px) {
+    .header-container, .boxes-section, .sponsorship-section {
+        flex-direction: column;
+    }
+
+    .box, .content-box, .sponsor-logos {
+        width: 100%; /* Full width for mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Spacing for stacked nav items */
+    }
+}

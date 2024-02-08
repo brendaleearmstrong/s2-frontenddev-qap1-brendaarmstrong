@@ -1,0 +1,140 @@
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, li {
+    margin: 10px
+    padding: 10px;
+}
+
+/* Body and global styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Highlight bar at the top of the page */
+.highlight-bar {
+    background-color: #76a06a; 
+    color: #ffffff; 
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+    text-align: center; /* Center the text */
+}
+
+/* Header styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #88B483; /* Green font color */
+    background-color: #ffffff; /* White background */
+}
+
+.logo img {
+    height: 250px; /* Set the height of the logo */
+    width: auto; /* Ensure the width is auto to maintain aspect ratio */
+}
+
+/* Navigation styles */
+nav {
+    flex: 2;
+    color: #541D1F;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #541D1F; /* Change as per your color scheme */
+}
+
+.booking-form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type=text],
+.form-group input[type=tel],
+.form-group input[type=email],
+.form-group input[type=date],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type=submit] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #88B483; /* Adjust the color to fit your site's theme */
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.form-group input[type=submit]:hover {
+    background-color: #76a06a; /* Slightly darker shade for hover effect */
+}
+
+
+
+.sponsoring-partners .partner img {
+    height: 200px; /* Set the height of the partner logos */
+    width: auto; /* Ensure the width is auto to maintain aspect ratio */
+}
+
+/* Footer styles */
+footer {
+    background-color: #88B483; /* Change as per your color scheme */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+footer .footer-box {
+    /* Add styles for footer content here */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 980px) {
+    .three-box-section, .sponsoring-partners {
+        flex-direction: column;
+    }
+    
+    .three-box-section .box, .sponsoring-partners .partner {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
